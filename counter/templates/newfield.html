@@ -1,0 +1,13 @@
+{% extends 'new.html' %}
+
+{% block content %}
+	<form action="new_field" method="post" >
+	
+	{% csrf_token %}	
+		
+		<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="unique field name" name="field_name">
+		
+		<input type="submit" name="submit">
+	
+	</form>
+{% endblock %}

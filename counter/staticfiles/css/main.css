@@ -1,0 +1,29 @@
+.start{
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+.base{
+	width: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 120px;
+	height: 650px;
+	background-color: white;
+	border-radius: 25px;
+	text-align: center;
+}
+
+.happycoding{
+	text-align: center;
+	font-family: Comic Sans;
+	margin-bottom: 20px;
+	margin-top: 50px;
+}
+
+.plus{
+	
+}

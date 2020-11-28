@@ -1,0 +1,89 @@
+body{
+	background-image: url('bimg3.jpg');	
+}
+
+#logo{
+	color: white;
+}
+#whole{
+	
+	background-color: white;
+	width: 75%;
+	border-radius: 50px;
+	padding: 65px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+#plus{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+
+}
+
+
+.plus_image:hover .plus_text {
+	text-align: justify;
+}
+
+.welcome{
+	text-align: center;
+	font-family: serif;
+	font-weight: bold;
+}
+
+.fields{
+	margin-left: 50px; 
+}
+
+#field_panel{
+	background-color: #CACFD2 ;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+#field_name{
+	text-align: left;
+}
+
+.increment{
+	margin-top: 7px;
+	margin-bottom: auto;
+	height: 40px;
+	width: 40px;
+}
+
+#reset_button{
+	margin-top: 10px;
+}
+
+#add_new_field{
+	align-content: center;
+	text-align: left;
+
+}
+
+#add_button{
+	font-size: 1.5em;
+	margin-bottom: 5px;
+	margin-top: 10px;
+}
+
+.field_name{
+	text-align: left;
+}
+
+.ok_button{
+	margin-top: 10px;
+	height: 50px; 
+	width: 50px ;
+	text-align: center;
+}
+
+#happy_coding{
+	color: white;
+	font-family: "Grandstander", "Henny Penny", serif;
+	font-size: 1.5em;
+}

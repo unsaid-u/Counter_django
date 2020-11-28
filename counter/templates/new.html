@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>countzz</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/count.css' %}">
+	<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Henny+Penny|Grandstander">
+</head>
+
+<body>
+	<div class="container">
+		<br>
+		<div class="row text-center" id="logo">
+			<h1><b>¯\_(ツ)_/¯</b></h1>
+		</div>
+		<br>
+		<div class="row" id="whole">
+			<div class="welcome">
+				<h1><b>Welcome to daily coding counterzz</b></h1>
+				<hr>
+			</div>
+			
+			<div class="text-center" id="plus">
+				<div class="plus_image">
+				<a href="{% url 'plus_all' %}"> <img src="{% static 'images/plus.png' %}" alt="plus" height="150" width="150"></a>
+				</div>				
+			</div>
+			<br>
+			
+			<div class="fields">
+				{% for i in fields %}
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="panel panel-default" id="field_panel">
+  							<div class="panel-body">
+  								<div class="col-sm-6" id="field_name">{{i.field_name}}</div>
+  								<div class="col-sm-6"><b>{{i.value}}</b></div>
+  							</div>
+						</div>		
+					</div>
+
+					<div class="col-sm-4">
+						<div class="col-sm-4">
+							<a href="{% url 'increment' i.field_name %}"><img src="{% static 'images/plus.png' %}" class="increment"></a>
+						</div>
+
+						<div class="col-sm-4">
+							<a href="{% url 'delete' i.field_name %}"><img src="{% static 'images/redcross.jpg' %}" class="increment"></a>	
+						</div>
+
+						<div class="col-sm-4">
+							<a href="{% url 'reset' i.field_name %}"><button type="button" class="btn btn-primary" id="reset_button">Reset</button></a>
+						</div>
+
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+				
+			<br>
+			
+			<div id="add_new_field">
+				<a class="btn btn-success btn-lg text-center" id ="add_button" href="{% url 'nf_press' %}" role="button">Add new field</a>
+				{% if press %}
+				<form action="new_field/" method="post" >
+					{% csrf_token %}	
+					 <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="unique field name" name="field_name">
+					 <input type="submit" name="submit">
+				</form>
+				{% endif %}	
+			</div>
+		</div>
+		
+		<br>
+		<br>
+		<div class="row text-center" id="happy_coding" >
+			<a href="{% url 'homepage' %}"><h1>HAPPY CODING :-)</h1></a>
+		</div>
+	</div>
+</body>
+</html>
